@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | TejasCare24</title>
+    <meta name="description"
+        content="Explore our wide range of home healthcare services: Nursing Care, Attendant Care, Mother & Elder Care, Personal ICU, Physiotherapy, and Doctor on Call.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="https://tejascare24.com/wp-content/uploads/2021/08/logo.jpg" type="image/x-icon">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://tejascare24.com/wp-content/uploads/2021/08/logo.jpg" alt="TejasCare24 Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-2">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">Our Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="equipment.html">Medical Equipment</a></li>
+                    <li class="nav-item"><a class="btn btn-primary ms-lg-2" href="appointment.html">Book Appointment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5 reveal">
+                <div class="col-12 section-title">
+                    <h2>Our Healthcare Services</h2>
+                    <p class="lead">Dedicated care tailored to your specific needs. Click 'View Details' for more
+                        information.</p>
+                </div>
+            </div>
+            <div class="row g-4" id="services-list">
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="serviceModalLabel">Service Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4">
+                        <div class="col-md-5">
+                            <img src="" id="modal-service-image" class="img-fluid rounded" alt="">
+                        </div>
+                        <div class="col-md-7">
+                            <p id="modal-service-description"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center border-0 pb-3">
+                    <a href="#" id="modal-whatsapp-btn" target="_blank" class="btn btn-success btn-lg">
+                        <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="pt-5 pb-4 bg-dark text-white-50">
+        <div class="container text-md-left">
+            <div class="row">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-white">TejasCare24</h5>
+                    <p>Providing complete ICU facilities and compassionate care at home in the Delhi NCR region.</p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-white">Quick Links</h5>
+                    <p><a href="about.html" class="text-white-50">About Us</a></p>
+                    <p><a href="services.html" class="text-white-50">Services</a></p>
+                    <p><a href="equipment.html" class="text-white-50">Equipment</a></p>
+                    <p><a href="appointment.html" class="text-white-50">Book Now</a></p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-white">Contact</h5>
+                    <p><i class="fas fa-home me-3"></i> MSX MALL, Greater Noida, UP</p>
+                    <p><i class="fas fa-envelope me-3"></i> info@tejascare24.com</p>
+                    <p><i class="fas fa-phone me-3"></i> +91 9891816660</p>
+                </div>
+            </div>
+            <div class="text-center pt-4 mt-4 border-top border-secondary">
+                <p>© 2025 Copyright: <a href="index.html" class="text-white fw-bold">TejasCare24.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <div id="floating-contact-buttons">
+        <a href="https://wa.me/919891816660?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
+            target="_blank" class="contact-float-btn whatsapp-float" aria-label="Chat on WhatsApp"><i
+                class="fab fa-whatsapp"></i></a>
+        <a href="tel:+919891816660" class="contact-float-btn phone-float" aria-label="Call Now"><i
+                class="fas fa-phone-alt"></i></a>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            const services = [
+                { name: "Nursing Care", img: "https://plus.unsplash.com/premium_photo-1661769750739-1a05a073f124?q=80&w=2070&auto=format&fit=crop", desc: "Our certified nurses provide expert medical care including wound dressing, injections, IV administration, catheter care, vaccination, and comprehensive post-operative monitoring for a speedy and safe recovery at home." },
+                { name: "Personal ICU", img: "https://images.unsplash.com/photo-1631549916795-d856b840ac31?q=80&w=2070&auto=format&fit=crop", desc: "We provide a complete ICU setup at home for critically ill patients. This includes a ventilator, cardiac monitor, infusion pump, suction machine, and other essential equipment, all managed by our highly skilled critical care nurses and doctors." },
+                { name: "Attendant Care", img: "https://images.unsplash.com/photo-1618244983933-21c60b37c561?q=80&w=2070&auto=format&fit=crop", desc: "Our trained and verified attendants assist patients with daily activities such as mobility support, feeding, personal hygiene, and companionship. They ensure patient safety and comfort, providing relief for family members." },
+                { name: "Physiotherapy", img: "https://images.unsplash.com/photo-1599442033622-3a33333f1eda?q=80&w=2070&auto=format&fit=crop", desc: "Our experienced physiotherapists offer personalized treatment plans for post-surgical rehabilitation, neurological conditions, sports injuries, and chronic pain management. All sessions are conducted in the comfort of your home." },
+                { name: "Elder Care", img: "https://images.unsplash.com/photo-1602796939493-398d0224155b?q=80&w=1974&auto=format&fit=crop", desc: "We offer comprehensive and compassionate care plans for senior citizens, focusing on their health, wellness, and companionship. Services include medication management, mobility assistance, and help with daily routines." },
+                { name: "Mother & Baby Care", img: "https://images.unsplash.com/photo-1566004100631-35d015d6a491?q=80&w=2070&auto=format&fit=crop", desc: "Specialized care for new mothers and their infants. Our caregivers assist with post-delivery recovery, lactation support, newborn care, and ensuring a healthy, stress-free environment for both mother and child." },
+                { name: "Doctor on Call", img: "https://images.unsplash.com/photo-1551191834-6e6a10018903?q=80&w=2070&auto=format&fit=crop", desc: "Get professional medical consultations from qualified doctors at your home. Ideal for routine check-ups, minor illnesses, and medical advice without the hassle of traveling to a clinic." }
+            ];
+
+            const servicesListContainer = document.getElementById('services-list');
+            const phoneNumber = "919891816660";
+
+            services.forEach((service, idx) => {
+                const encodedText = encodeURIComponent(`I would like to inquire about your ${service.name} service.`);
+                const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedText}`;
+
+                const cardHtml = `
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="card h-100">
+                        <img src="${service.img}" class="card-img-top" alt="${service.name}">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title">${service.name}</h3>
+                            <p class="card-text flex-grow-1">${service.desc.substring(0, 100)}...</p>
+                            <button class="btn btn-outline-primary mt-auto view-details-btn" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#serviceModal"
+                                    data-title="${service.name}"
+                                    data-image="${service.img}"
+                                    data-description="${service.desc}"
+                                    data-whatsapp-link="${whatsappUrl}">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+                servicesListContainer.innerHTML += cardHtml;
+            });
+
+            
+            document.addEventListener('click', function (event) {
+                if (event.target && event.target.classList.contains('view-details-btn')) {
+                    const button = event.target;
+                    const title = button.getAttribute('data-title');
+                    const image = button.getAttribute('data-image');
+                    const description = button.getAttribute('data-description');
+                    const whatsappLink = button.getAttribute('data-whatsapp-link');
+
+                    const modalTitle = document.querySelector('#serviceModal .modal-title');
+                    const modalImage = document.querySelector('#modal-service-image');
+                    const modalDescription = document.querySelector('#modal-service-description');
+                    const modalWhatsappBtn = document.querySelector('#modal-whatsapp-btn');
+
+                    modalTitle.textContent = title;
+                    modalImage.src = image;
+                    modalImage.alt = title;
+                    modalDescription.textContent = description;
+                    modalWhatsappBtn.href = whatsappLink;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

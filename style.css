@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --bs-primary: #005A9E;
+    
+    --bs-secondary: #0a9952;
+    
+    --bs-dark: #212529;
+    --bs-light: #f8f9fa;
+    --text-color: #555;
+    --whatsapp-green: #25D366;
+    --call-blue: #007bff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background-color: #fff;
+}
+
+
+.reveal {
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+.navbar-brand img {
+    max-height: 45px;
+}
+
+.navbar .nav-link {
+    font-weight: 500;
+}
+
+.navbar .nav-link.active {
+    color: var(--bs-primary);
+}
+
+
+.hero-slider .carousel-item {
+    height: 90vh;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-slider .carousel-caption {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 3rem 1rem 4rem 1rem;
+    text-align: center;
+}
+
+.hero-slider .carousel-caption h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.section-title h2 {
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: var(--bs-primary);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+
+.feature-box {
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 90, 158, 0.1);
+}
+
+.feature-box .icon {
+    font-size: 3rem;
+    color: var(--bs-primary);
+    margin-bottom: 1rem;
+}
+
+
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+
+
+#serviceModal .modal-header {
+    background-color: var(--bs-primary);
+    color: #fff;
+}
+
+#serviceModal .modal-title {
+    font-weight: 600;
+}
+
+#serviceModal .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+#modal-service-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+
+#floating-contact-buttons {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-float-btn {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    text-decoration: none;
+    transition: transform 0.18s, box-shadow 0.18s;
+    border: none;
+    outline: none;
+}
+
+.contact-float-btn:active,
+.contact-float-btn:focus,
+.contact-float-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+    color: #fff;
+}
+
+.whatsapp-float {
+    background: #25D366;
+}
+
+.phone-float {
+    background: #007bff;
+}
+
+
+.whatsapp-cta-box {
+    background-color: var(--bs-light);
+    border-radius: 15px;
+    padding: 2.5rem;
+    text-align: center;
+    border: 1px solid #dee2e6;
+}
+
+.whatsapp-cta-box .btn-whatsapp {
+    background-color: var(--whatsapp-green);
+    color: white;
+    font-size: 1.5rem;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.whatsapp-cta-box .btn-whatsapp:hover {
+    background-color: #1ebe58;
+}
+
+
+footer {
+    background-color: var(--bs-dark);
+    color: #adb5bd;
+}
+
+footer h5 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+footer a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
