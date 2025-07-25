@@ -2,9 +2,9 @@
 
 :root {
     --bs-primary: #005A9E;
-    
+
     --bs-secondary: #0a9952;
-    
+
     --bs-dark: #212529;
     --bs-light: #f8f9fa;
     --text-color: #555;
@@ -235,4 +235,46 @@ footer a {
 footer a:hover {
     color: #fff;
     text-decoration: underline;
+}
+
+/* --- Custom Mobile Menu Improvements --- */
+@media (max-width: 991.98px) {
+    .navbar .navbar-brand {
+        margin-right: auto !important;
+    }
+
+    .navbar-toggler {
+        margin-left: 0.5rem;
+    }
+
+    .navbar-collapse {
+        background: #fff;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        border-radius: 0 0 12px 12px;
+        margin-top: 0.5rem;
+        padding: 1rem 0.5rem;
+    }
+
+    .navbar-nav {
+        gap: 0.5rem !important;
+    }
+
+    .navbar-nav .nav-item {
+        text-align: right;
+    }
+
+    .navbar-nav .btn {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Equipment section card grid for mobile */
+@media (max-width: 767.98px) {
+    .row.g-4.justify-content-center>.col-lg-3 {
+        max-width: 90%;
+        flex: 0 0 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
