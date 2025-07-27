@@ -160,6 +160,7 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             const services = [
+                { name: "Medical Equipment Buy/rent", img: "equipment.jpg", desc: "High-quality, sanitized equipment for your home patient care needs." },
                 { name: "Nursing Care", img: "nursing_care.jpeg", desc: "Our certified nurses provide expert medical care including wound dressing, injections, IV administration, catheter care, vaccination, and comprehensive post-operative monitoring for a speedy and safe recovery at home." },
                 { name: "Personal ICU", img: "ICU.jpg", desc: "We provide a complete ICU setup at home for critically ill patients. This includes a ventilator, cardiac monitor, infusion pump, suction machine, and other essential equipment, all managed by our highly skilled critical care nurses and doctors." },
                 { name: "Attendant Care", img: "attendant.jpg", desc: "Our trained and verified attendants assist patients with daily activities such as mobility support, feeding, personal hygiene, and companionship. They ensure patient safety and comfort, providing relief for family members." },
@@ -176,26 +177,44 @@
                 const encodedText = encodeURIComponent(`I would like to inquire about your ${service.name} service.`);
                 const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedText}`;
 
-                const cardHtml = `
-                <div class="col-lg-4 col-md-6 reveal">
-                    <div class="card h-100">
-                        <img src="${service.img}" class="card-img-top" alt="${service.name}">
-                        <div class="card-body d-flex flex-column">
-                            <h3 class="card-title">${service.name}</h3>
-                            <p class="card-text flex-grow-1">${service.desc.substring(0, 100)}...</p>
-                            <button class="btn btn-outline-primary mt-auto view-details-btn" 
-                                    data-bs-toggle="modal" 
-                                    data-bs-target="#serviceModal"
-                                    data-title="${service.name}"
-                                    data-image="${service.img}"
-                                    data-description="${service.desc}"
-                                    data-whatsapp-link="${whatsappUrl}">
-                                View Details
-                            </button>
+                let cardHtml;
+                if (service.name === "Medical Equipment Buy/rent") {
+                    cardHtml = `
+                    <div class="col-lg-4 col-md-6 reveal">
+                        <div class="card h-100">
+                            <img src="${service.img}" class="card-img-top" alt="${service.name}">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">${service.name}</h3>
+                                <p class="card-text flex-grow-1">${service.desc.substring(0, 100)}...</p>
+                                <a class="btn btn-outline-primary mt-auto" href="equipment.html">
+                                    View Details
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            `;
+                `;
+                } else {
+                    cardHtml = `
+                    <div class="col-lg-4 col-md-6 reveal">
+                        <div class="card h-100">
+                            <img src="${service.img}" class="card-img-top" alt="${service.name}">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">${service.name}</h3>
+                                <p class="card-text flex-grow-1">${service.desc.substring(0, 100)}...</p>
+                                <button class="btn btn-outline-primary mt-auto view-details-btn" 
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#serviceModal"
+                                        data-title="${service.name}"
+                                        data-image="${service.img}"
+                                        data-description="${service.desc}"
+                                        data-whatsapp-link="${whatsappUrl}">
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                }
                 servicesListContainer.innerHTML += cardHtml;
             });
 
