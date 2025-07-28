@@ -126,6 +126,19 @@
         </div>
     </div>
 
+    <section class="py-5">
+            <div class="container">
+                <div class="row justify-content-center text-center reveal">
+                    <div class="col-lg-8">
+                        <h2>Ready to Get Started?</h2>
+                        <p class="lead">Contact us today for a free consultation. Our care managers are ready to assist
+                            you in creating a personalized care plan that meets your needs.</p>
+                        <a href="appointment.html" class="btn btn-primary btn-lg mt-3">Book Your Appointment Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     <footer class="pt-5 pb-4 bg-dark text-white-50">
         <div class="container text-md-left">
             <div class="row">
@@ -160,14 +173,14 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             const services = [
-                { name: "Medical Equipment Buy/rent", img: "equipment.jpg", desc: "High-quality, sanitized equipment for your home patient care needs." },
-                { name: "Nursing Care", img: "nursing_care.jpeg", desc: "Our certified nurses provide expert medical care including wound dressing, injections, IV administration, catheter care, vaccination, and comprehensive post-operative monitoring for a speedy and safe recovery at home." },
-                { name: "Personal ICU", img: "ICU.jpg", desc: "We provide a complete ICU setup at home for critically ill patients. This includes a ventilator, cardiac monitor, infusion pump, suction machine, and other essential equipment, all managed by our highly skilled critical care nurses and doctors." },
-                { name: "Attendant Care", img: "attendant.jpg", desc: "Our trained and verified attendants assist patients with daily activities such as mobility support, feeding, personal hygiene, and companionship. They ensure patient safety and comfort, providing relief for family members." },
-                { name: "Physiotherapy", img: "physiotherapy.jpg", desc: "Our experienced physiotherapists offer personalized treatment plans for post-surgical rehabilitation, neurological conditions, sports injuries, and chronic pain management. All sessions are conducted in the comfort of your home." },
-                { name: "Elder Care", img: "elder_care.jpg", desc: "We offer comprehensive and compassionate care plans for senior citizens, focusing on their health, wellness, and companionship. Services include medication management, mobility assistance, and help with daily routines." },
-                { name: "Mother & Baby Care", img: "https://images.unsplash.com/photo-1566004100631-35d015d6a491?q=80&w=2070&auto=format&fit=crop", desc: "Specialized care for new mothers and their infants. Our caregivers assist with post-delivery recovery, lactation support, newborn care, and ensuring a healthy, stress-free environment for both mother and child." },
-                { name: "Doctor on Call", img: "doc.jpg", desc: "Get professional medical consultations from qualified doctors at your home. Ideal for routine check-ups, minor illnesses, and medical advice without the hassle of traveling to a clinic." }
+            { name: "Nursing Care", img: "nursing_care.jpeg", desc: "Our certified nurses provide expert medical care including wound dressing, injections, IV administration, catheter care, vaccination, and comprehensive post-operative monitoring for a speedy and safe recovery at home." },
+            { name: "Personal ICU", img: "ICU.jpg", desc: "We provide a complete ICU setup at home for critically ill patients. This includes a ventilator, cardiac monitor, infusion pump, suction machine, and other essential equipment, all managed by our highly skilled critical care nurses and doctors." },
+            { name: "Attendant Care", img: "attendant.jpg", desc: "Our trained and verified attendants assist patients with daily activities such as mobility support, feeding, personal hygiene, and companionship. They ensure patient safety and comfort, providing relief for family members." },
+            { name: "Physiotherapy", img: "physiotherapy.jpg", desc: "Our experienced physiotherapists offer personalized treatment plans for post-surgical rehabilitation, neurological conditions, sports injuries, and chronic pain management. All sessions are conducted in the comfort of your home." },
+            { name: "Elder Care", img: "elder_care.jpg", desc: "We offer comprehensive and compassionate care plans for senior citizens, focusing on their health, wellness, and companionship. Services include medication management, mobility assistance, and help with daily routines." },
+            { name: "Mother & Baby Care", img: "https://images.unsplash.com/photo-1566004100631-35d015d6a491?q=80&w=2070&auto=format&fit=crop", desc: "Specialized care for new mothers and their infants. Our caregivers assist with post-delivery recovery, lactation support, newborn care, and ensuring a healthy, stress-free environment for both mother and child." },
+            { name: "Doctor on Call", img: "doc.jpg", desc: "Get professional medical consultations from qualified doctors at your home. Ideal for routine check-ups, minor illnesses, and medical advice without the hassle of traveling to a clinic." },
+            { name: "Medical Equipment Buy/rent", img: "equipment.jpg", desc: "High-quality, sanitized equipment for your home patient care needs." }
             ];
 
             const servicesListContainer = document.getElementById('services-list');
@@ -217,7 +230,7 @@
                 }
                 servicesListContainer.innerHTML += cardHtml;
             });
-
+            
 
             document.addEventListener('click', function (event) {
                 if (event.target && event.target.classList.contains('view-details-btn')) {
